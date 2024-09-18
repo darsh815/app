@@ -1,40 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'PaymentSuccessPage.dart';
+import 'ProfilePage.dart';
 
-// Define the ProfilePage
-class ProfilePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-        backgroundColor: Colors.lime,
-      ),
-      body: Center(
-        child: const Text('Profile Page'),
-      ),
-    );
-  }
-}
-
-// Define the PaymentPage
-class PaymentPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Payment'),
-        backgroundColor: Colors.lime,
-      ),
-      body: Center(
-        child: const Text('Payment Page'),
-      ),
-    );
-  }
-}
-
-// Define the CourseDetailsPage
 class CourseDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -86,39 +53,6 @@ class CourseDetailsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // "Our Student" Text
-                  const Text(
-                    'Our Student',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 8),
-
-                  // Student Profiles
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/student1.jpg'),
-                      ),
-                      SizedBox(width: 8),
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/student2.jpg'),
-                      ),
-                      SizedBox(width: 8),
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/student3.jpg'),
-                      ),
-                      SizedBox(width: 8),
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/student4.jpg'),
-                      ),
-                      SizedBox(width: 8),
-                      CircleAvatar(
-                        backgroundImage: AssetImage('assets/student5.jpg'),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-
                   // Course Title and Description
                   const Text(
                     'Photoshop Editing Course',
@@ -150,10 +84,10 @@ class CourseDetailsPage extends StatelessWidget {
                             child: const Icon(
                               Icons.play_arrow,
                               color: Colors.lime,
-                              size: 12,
+                              size: 22,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          const SizedBox(width: 18),
                           const Text(
                             '30 Lessons',
                             style: TextStyle(color: Colors.black54),
@@ -224,7 +158,7 @@ class CourseDetailsPage extends StatelessWidget {
                         Row(
                           children: [
                             const Icon(Icons.lock, color: Colors.grey),
-                            const SizedBox(width: 16),
+                            const SizedBox(width: 5.5),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -245,7 +179,7 @@ class CourseDetailsPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.lime, // Lime green color
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
                           ),
                         ),
@@ -285,7 +219,7 @@ class CourseDetailsPage extends StatelessWidget {
                       minimumSize: const Size(double.infinity, 50),
                       backgroundColor: Colors.lime, // Green lime color
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0), // Rounded corners
+                        borderRadius: BorderRadius.circular(10.0), // Rounded corners
                       ),
                     ),
                     child: const Text(

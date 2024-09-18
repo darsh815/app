@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CourseDetailPage.dart';
 
 class PaymentSuccessPage extends StatelessWidget {
   @override
@@ -11,27 +12,72 @@ class PaymentSuccessPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Top checkmark icon and success confetti
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 10,
+              // Top checkmark icon and surrounding shapes
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  // Decorative shapes around the checkmark
+                  Positioned(
+                    top: -20,
+                    left: -30,
+                    child: Icon(
+                      Icons.star,
+                      color: Colors.orangeAccent,
+                      size: 20,
                     ),
-                  ],
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Icon(
-                    Icons.check_circle,
-                    size: 60,
-                    color: Colors.green,
                   ),
-                ),
+                  Positioned(
+                    top: -10,
+                    right: -40,
+                    child: Icon(
+                      Icons.circle,
+                      color: Colors.green,
+                      size: 15,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 10,
+                    left: -20,
+                    child: Icon(
+                      Icons.circle,
+                      color: Colors.blueAccent,
+                      size: 12,
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -10,
+                    right: -30,
+                    child: Icon(
+                      Icons.star,
+                      color: Colors.purpleAccent,
+                      size: 25,
+                    ),
+                  ),
+
+                  // Checkmark icon with circle background
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 10,
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Icon(
+                        Icons.check_circle,
+                        size: 60,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+
               SizedBox(height: 20),
 
               // Payment Success and Amount Text
@@ -69,8 +115,8 @@ class PaymentSuccessPage extends StatelessWidget {
                         children: [
                           // Profile Icon
                           CircleAvatar(
-                            backgroundImage: NetworkImage(
-                              'https://example.com/user-profile.jpg', // Replace with a user profile image or icon
+                            backgroundImage: AssetImage(
+                              'assets/user2.png', // Replace with a local user profile image
                             ),
                             radius: 18,
                           ),
@@ -147,9 +193,9 @@ class PaymentSuccessPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
 
-              // Barcode Image (can be added using an asset or placeholder)
+              // Barcode Image (replace with actual asset)
               Image.asset(
-                'assets/images1.png', // Replace with your barcode image
+                'assets/images1.png', // Ensure you have this image in your assets
                 height: 80,
               ),
 
@@ -158,7 +204,11 @@ class PaymentSuccessPage extends StatelessWidget {
               // Done Button
               ElevatedButton(
                 onPressed: () {
-                  // Add the functionality here
+                  // Navigate to the next screen on button press
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CourseDetailsPage()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightGreen,

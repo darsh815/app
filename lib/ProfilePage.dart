@@ -33,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Row(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('assets/profile_image.jpg'),
+              backgroundImage: AssetImage('assets/user2.png'),
             ),
             SizedBox(width: 10),
             Column(
@@ -137,21 +137,21 @@ class _ProfilePageState extends State<ProfilePage> {
                     logoPath: 'assets/Adobe_Illustrator_CC_icon.svg.png',
                     rating: '4.8',
                     lessons: '30 Lessons',
-                    participants: ['assets/user1.jpg', 'assets/user2.jpg', 'assets/user3.jpg'],
+                    participants: ['assets/user1.png', 'assets/user2.png', 'assets/user3.png'],
                   ),
                   CourseCard(
                     title: 'Illustrator Editing Course',
                     logoPath: 'assets/Adobe_Photoshop_CC_icon.svg.png',
                     rating: '4.8',
                     lessons: '30 Lessons',
-                    participants: ['assets/user1.jpg', 'assets/user2.jpg', 'assets/user3.jpg'],
+                    participants: ['assets/user4.png', 'assets/user5.png', 'assets/user6.png'],
                   ),
                   CourseCard(
                     title: 'Adobe Xd Editing Course',
                     logoPath: 'assets/images.png',
                     rating: '4.8',
                     lessons: '30 Lessons',
-                    participants: ['assets/user1.jpg', 'assets/user2.jpg', 'assets/user3.jpg'],
+                    participants: ['assets/user1.png', 'assets/user3.png', 'assets/user5.png'],
                   ),
                 ],
               ),

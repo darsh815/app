@@ -18,7 +18,7 @@ class CourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: 280,
       margin: EdgeInsets.only(right: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -42,7 +42,7 @@ class CourseCard extends StatelessWidget {
               title,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               children: participants.map((participant) {
                 return Padding(
@@ -54,16 +54,16 @@ class CourseCard extends StatelessWidget {
                 );
               }).toList(),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Text('Participant'),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               children: [
                 Icon(Icons.star, color: Colors.orange, size: 16),
                 Text(rating),
               ],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
 
             // Row with Play button and Lessons Text
             Row(
